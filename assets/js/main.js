@@ -1,9 +1,7 @@
-let scrollpos = window.scrollY;
-const header = document.getElementById("header");
-const navcontent = document.getElementById("nav-content");
-
 document.addEventListener("scroll", function () {
-  scrollpos = window.scrollY;
+  const scrollpos = window.scrollY;
+  const header = document.getElementById("header");
+  const navcontent = document.getElementById("nav-content");
 
   if (scrollpos > 10) {
     header.classList.add("shadow-lg");
@@ -16,12 +14,12 @@ document.addEventListener("scroll", function () {
   }
 });
 
-const navMenuDiv = document.getElementById("nav-content");
-const navMenu = document.getElementById("nav-toggle");
-
 document.onclick = check;
 function check(e) {
   const target = e && e.target;
+
+  const navMenuDiv = document.getElementById("nav-content");
+  const navMenu = document.getElementById("nav-toggle");
 
   if (!checkParent(target, navMenuDiv)) {
     if (checkParent(target, navMenu)) {
@@ -35,6 +33,7 @@ function check(e) {
     }
   }
 }
+
 function checkParent(t, elm) {
   while (t.parentNode) {
     if (t === elm) {
