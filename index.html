@@ -16,16 +16,13 @@
     }
   </style>
   <script type="module">
-    import { windrunner } from "https://cdn.jsdelivr.net/npm/windrunner@latest/dist/index.min.js";
+    import { windrunner } from "https://cdn.jsdelivr.net/npm/windrunner@1.1.7/dist/index.min.js";
     windrunner({
       autoStart: true,
       onReady: () => (document.documentElement.style.opacity = "1"),
     });
   </script>
   <style>
-    html {
-      font-family: "National Park", sans-serif;
-    }
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -52,7 +49,7 @@
   </style>
 </head>
 
-<body class="bg-slate-950 text-slate-100 antialiased">
+<body class="font-['National_Park'] bg-slate-950 text-slate-100 antialiased">
 
   <!-- LANGUAGE TOGGLE -->
   <div class="fixed top-4 right-4 z-50">
